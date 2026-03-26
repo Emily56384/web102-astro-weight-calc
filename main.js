@@ -22,11 +22,11 @@ function populatePlanetList() {                          //tada function
     const option = document.createElement("option");    //
     option.value = name;                                //
     option.textContent = name;                          //
-    select.appendChild(option);                         // html shit of getting planet names, please dont ask this was painful
+    select.appendChild(option);                         // html stuff of getting planet names, please dont ask this was painful
   });
 }
       // nfc this means"“watch the page for a specific event, then run"
-document.addEventListener("DOMContentLoaded", populatePlanetList);      //google says dom is so shit doesnt break??
+document.addEventListener("DOMContentLoaded", populatePlanetList);      
                                                                        // planetlist calls back to selection of planets 
 function calculateWeight(weight, planetName) {                //another function
   const planet = planets.find(p => p[0] === planetName);      //find planet name where first index is name
@@ -42,10 +42,10 @@ function handleClickEvent() {                               //oh look
     alert("Enter valid weight and planet");
     return;
   }
-                                                                // fuck you.toFixed
+                                                                // f*** you.toFixed
   const message = `If you were on ${planetName}, you would weigh ${newWeight.toFixed(2)}lbs!`;
   document.getElementById("output").textContent = message;        //displays text
 }
 
-const calculateButton = document.getElementById("calculate-button");  //does button shit
-calculateButton.onclick = handleClickEvent;                     //makes function do function shit 
+const calculateButton = document.getElementById("calculate-button");  //does button stuff
+calculateButton.onclick = handleClickEvent;                     //makes function do function stuff 
